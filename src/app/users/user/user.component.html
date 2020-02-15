@@ -1,0 +1,22 @@
+<div class="user-details" *ngIf="user">
+  <h1>{{user.name}}</h1>
+  <img class="user-image" src="{{user.image.url}}" alt="{{user.name}}">
+
+  <div class="container">
+    <mat-list>
+      <mat-list-item>First name: {{user.first_name}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Last name: {{user.last_name}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Email: {{user.email}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Region: {{user.region}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Sex: {{capitalize(user.sex)}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Subscription: {{user.subscription ? 'Yes' : 'No'}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Additional information: {{user.additional_information}}</mat-list-item>
+    </mat-list>
+  </div>
+</div>

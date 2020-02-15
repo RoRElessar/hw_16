@@ -1,0 +1,28 @@
+<h1>List of users</h1>
+
+<div class="spinner-container">
+  <mat-spinner *ngIf="spinner"></mat-spinner>
+</div>
+
+<div class="container" *ngIf="!spinner">
+  <div *ngFor="let user of users">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + user.image.url + ')'}"></div>
+        <mat-card-title>{{user.first_name}}</mat-card-title>
+        <mat-card-subtitle>{{user.last_name}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="image-container">
+        <img class="user-image" mat-card-image src="{{user.image.url}}" alt="{{user.name}}">
+      </div>
+      <mat-card-content>
+        <p>{{user.additional_information}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <mat-nav-list>
+          <a [routerLink]="'/users/' + user.id" mat-button href="#">More information</a>
+        </mat-nav-list>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
