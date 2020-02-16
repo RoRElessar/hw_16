@@ -1,0 +1,16 @@
+<div class="errors-container">
+  <span class="mat-error" *ngIf="formField.invalid && formField.touched">
+    This field is required.
+  </span>
+
+  <span class="mat-error" *ngIf="formField.touched && !matchRegExp(formField)">
+    <span *ngIf="formField.name === 'email'; else elseBlock">Wrong email format</span>
+    <ng-template #elseBlock>
+      <span>Wrong format. Use letters and numbers only.</span>
+    </ng-template>
+  </span>
+
+  <span class="mat-error" *ngIf="formField.touched && checkLength(formField)">
+    Should be 10 symbols or more.
+  </span>
+</div>

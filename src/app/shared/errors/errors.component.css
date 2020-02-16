@@ -1,0 +1,9 @@
+.errors-container {
+  position: absolute;
+  bottom: 0;
+}
+
+span {
+  display: inline-block;
+  margin-right: 5px;
+}

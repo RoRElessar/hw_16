@@ -5,9 +5,26 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a [routerLink]="'/users'" [routerLinkActive]="'active'" mat-list-item href="#">List all users</a>
-      <a mat-list-item href="#">Create user (reactive form)</a>
-      <a mat-list-item href="#">Create user (template driven form)</a>
+      <a routerLink="/users"
+         routerLinkActive="active"
+         mat-list-item
+         href="#">
+        List all users
+      </a>
+
+      <a routerLink="/create-user-with-reactive-form"
+         routerLinkActive="active"
+         mat-list-item
+         href="#">
+        Create user (reactive form)
+      </a>
+
+      <a routerLink="/create-user-with-template-driven-form"
+         routerLinkActive="active"
+         mat-list-item
+         href="#">
+        Create user (template driven form)
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

@@ -4,10 +4,10 @@ export interface UserI {
   last_name: string;
   name: string;
   email: string;
+  password: string;
+  password_confirmation: string;
   region: string;
-  image: {
-    url: string;
-  };
+  image: File | any;
   sex: string;
   subscription: boolean;
   additional_information: string;
@@ -25,6 +25,8 @@ export class User implements UserI {
     this.last_name = data.last_name;
     this.name = data.name;
     this.email = data.email;
+    this.password = data.password;
+    this.password_confirmation = data.password_confirmation;
     this.region = data.region;
     this.image = data.image;
     this.sex = data.sex;
@@ -39,10 +41,11 @@ export class User implements UserI {
   last_name: string;
   name: string;
   email: string;
+  password: string;
+  // tslint:disable-next-line:variable-name
+  password_confirmation: string;
   region: string;
-  image: {
-    url: string;
-  };
+  image: File | any;
   sex: string;
   subscription: boolean;
   // tslint:disable-next-line:variable-name

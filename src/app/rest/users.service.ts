@@ -16,4 +16,8 @@ export class UsersService {
   getUser(userId: string): Observable<User> {
     return this.http.get<User>(this.baseUrl + userId);
   }
+
+  createUser(formData: FormData) {
+    return this.http.post<User>(this.baseUrl, formData);
+  }
 }
