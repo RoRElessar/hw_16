@@ -11,7 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { UserTemplateDrivenFormComponent } from './user-template-driven-form/user-template-driven-form.component';
 import { UserReactiveFormComponent } from './user-reactive-form/user-reactive-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
@@ -39,6 +39,7 @@ import { ErrorsComponent } from '../shared/errors/errors.component';
     MatSelectModule,
     MatRadioModule,
     MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [UsersService]
 })
