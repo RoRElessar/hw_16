@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User, UserI } from '../../rest/users.model';
 import { UsersService } from '../../rest/users.service';
 import { Router } from '@angular/router';
+import {environment} from '../../../environments/environment';
 
 @Component({
   templateUrl: './user-template-driven-form.component.html',
@@ -11,8 +12,8 @@ import { Router } from '@angular/router';
 export class UserTemplateDrivenFormComponent {
 
   // tslint:disable-next-line:max-line-length
-  emailRegExp: RegExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-  nameRegExp: RegExp = new RegExp(/^[0-9a-zA-Z]+$/);
+  emailRegExp: RegExp = environment.emailRegExp;
+  nameRegExp: RegExp = environment.nameRegExp;
   regions = ['USA', 'Ukraine', 'Italy', 'France', 'Spain'];
   user: UserI = new User({
     id: null,
